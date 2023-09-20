@@ -115,21 +115,6 @@ def training_function(args):
         trainer.push_to_hub()
 
 
-
-def create_parser():
-    parser = argparse.ArgumentParser()
-
-    g = parser.add_argument_group('Device Targets')
-    g.add_argument(
-        '--config-file',
-        dest='config_file',
-        type=argparse.FileType(mode='r'))
-    g.add_argument('--name', default=[], action='append')
-    g.add_argument('--age', default=[], action='append')
-    g.add_argument('--delay', type=int)
-    g.add_argument('--stupid', dest='stupid', default=False, action='store_true')
-    return parser
-
 def create_parser():
     """Parse the arguments."""
     parser = argparse.ArgumentParser()
